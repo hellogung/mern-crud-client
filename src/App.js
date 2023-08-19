@@ -5,6 +5,7 @@ import EditUser from "./EditUser";
 import GetUser from "./GetUser";
 import Navbar from "./Components/Navbar";
 import Preloader from "./Components/Preloader";
+import Maintenance from "./Maintenance";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,9 +25,9 @@ function App() {
           <Navbar />
           <div className="container">
             <Routes>
-              <Route path="/" element={<GetUser />} />
-              <Route path="/add" element={<AddUser />} />
-              <Route path="/edit/:id" element={<EditUser />} />
+              <Route path="/" element={<Maintenance />} />
+              {/* <Route path="/add" element={<AddUser />} />
+              <Route path="/edit/:id" element={<EditUser />} /> */}
             </Routes>
           </div>
         </BrowserRouter>
